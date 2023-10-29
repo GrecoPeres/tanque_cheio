@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:tanque_cheio/cadastro_senha_page.dart';
 
-class RegistroPosto extends StatelessWidget {
+class RegistroCondutor extends StatelessWidget {
   TextEditingController phoneController = TextEditingController();
   var maskFormatter = MaskTextInputFormatter(
     mask: '(##) #####-####',
@@ -29,7 +29,7 @@ class RegistroPosto extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Para criar sua conta, insira alguns dados necessários por favor',
+              'Para registrar o estabelecimento, insira alguns dados necessários por favor',
               style: TextStyle(
                 color: Color(0xFF828282),
                 fontFamily: 'MADE TOMMY',
@@ -43,7 +43,7 @@ class RegistroPosto extends StatelessWidget {
             TextFormField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
-                labelText: 'Nome',
+                labelText: 'Nome da Empresa',
                 labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(11.0),
@@ -84,8 +84,8 @@ class RegistroPosto extends StatelessWidget {
           onPressed: () {
             Navigator.push(
               context,
-                MaterialPageRoute(builder: (context) => CadastroSenhaPage()),
-              );
+              MaterialPageRoute(builder: (context) => CadastroSenhaPage()),
+            );
           },
           style: ElevatedButton.styleFrom(
             primary: Color(0xFFFFC700),
